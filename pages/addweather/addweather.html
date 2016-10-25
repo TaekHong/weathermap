@@ -1,0 +1,38 @@
+<!--
+  Generated template for the Addweather page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addweather</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name='close-circle'></ion-icon>
+
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+  <ion-item>
+    <ion-label stacked>City</ion-label>
+      <ion-input type='text' [(ngModel)]='data.city'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Country</ion-label>
+    <ion-select [(ngModel)]='data.country'>
+      <ion-option value='kr'>Korea</ion-option>
+      <ion-option value='us'>United States</ion-option>
+    </ion-select>
+  </ion-item>
+
+</ion-list>
+<button ion-button block (click)="select()">Add Weather</button>
+</ion-content>

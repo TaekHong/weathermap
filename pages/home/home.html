@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+      <ion-buttons start>
+  <button ion-button (click)='onClick()'>Add</button>
+    </ion-buttons>
+    <ion-title>
+      weatherMap
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+   <ion-segment [(ngModel)]="city" (ionChange)='cityChanged()'>
+     <ion-segment-button *ngFor="let weather of weatherList" value=weather>
+     
+ {{weather.name}}
+</ion-segment-button>
+ 
+</ion-segment>
+
+
+ <div #map id="map"></div>
+
+</ion-content>
